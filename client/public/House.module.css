@@ -122,9 +122,7 @@
 .bedroomRightSection, .bathroomRightSection{
     color: rgb(48, 48, 48);
 }
-.favorite img{
-    filter: invert(1);
-}
+
 .cardImages{
     display: grid;
     grid-template-columns: 1fr 1fr;

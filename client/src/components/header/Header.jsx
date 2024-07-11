@@ -34,11 +34,13 @@ export function Header(){
     }, [])
 
     
-    function handleMenuClick(){
+    function handleMenuClick(e){
         if(isMenuOpen){
             reFmobileNavAuth.current.style.top = '-20%'    
+            e.target.className = 'menu-svg-open'
         }else{
             reFmobileNavAuth.current.style.top = '0%'
+            e.target.className = 'menu-svg-open-click'
         }
        
         setIsMenuOpen(prev => !prev)

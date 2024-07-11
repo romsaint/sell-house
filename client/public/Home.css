@@ -28,6 +28,15 @@ body{
     margin-left: auto;
     cursor: pointer;
     z-index: 2;
+    transition: 0.25s ease;
+}
+.menu-svg-open-click{
+    width: 50px;
+    margin-left: auto;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.25s ease;
+    rotate: 90deg;
 }
 .mobile-nav-auth{
     display: flex;

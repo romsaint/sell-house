@@ -7,7 +7,7 @@ import {useNavigate} from 'react-router-dom'
 
 
 export function MainOffers(){
-    const [favorite, setFavortite] = useState(false)
+    const [favorite, setFavorite] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
     const [minprice, setMinprice] = useState('Loading...')
     const [maxprice, setMaxprice] = useState('Loading...')
@@ -25,10 +25,6 @@ export function MainOffers(){
         e.preventDefault();
         const data = new FormData(e.target);
 
-        console.log()
-        console.log()
-        console.log()
-        console.log()
         navigate(`/all-offers?propertyPolicy=${data.get('propertyPolicy') === null ? '' : data.get('propertyPolicy')}&city=${data.get('location') === null ? '' : data.get('location')}&petPolicy=${data.get('petPolicy') === null ? '' : data.get('petPolicy')}&minprice=${data.get('minprice') === null ? '0' : data.get('minprice')}&maxprice=${data.get('maxprice') === null ? '99999999' : data.get('maxprice')}`);
         setUrl(new URL(location.href))
     }
@@ -77,8 +73,13 @@ export function MainOffers(){
     
     const navigate = useNavigate()
 
-    function setFavortiteF(e){
-        const res = apiRequest.get(`/set-favorite/`)
+    async function setFavoriteF(e, id){
+        e.preventDefault()
+        const res = await apiRequest(`/set-favorite/${id}`) 
+        if(res.data.ok){
+            setFavorite(prev => !prev)
+            getData()
+        }
     }
 
     return (
@@ -154,12 +155,15 @@ export function MainOffers(){
                                                     <p className={styles.bathroomRightSection}>{v.bathroom}</p>
                                                 </div>
                                                 <div className={styles.favoriteContainerRightSection}>
-                                                    <button className={`${styles.favorite} ${styles[`favorite${v._id}`]}`}>
-                                                        <img src="/src/assets/favorite-svgrepo-com.svg" alt="" />
-                                                    </button>
-                                                    <button className={styles.message}>
+                                                    <a href='/set-favorite' onClick={(e) => setFavoriteF(e, v._id)} className={`${styles.favorite} ${styles[`favorite${v._id}`]}`}>
+                                                        {v.isFavorite
+                                                            ?  <img src="/src/assets/favorite-svgrepo-com-yellow.svg" alt="" />
+                                                            :  <img src="/src/assets/favorite-svgrepo-com.svg" alt="" />
+                                                        }
+                                                    </a>
+                                                    <a href='/message' className={styles.message}>
                                                         <img src="/src/assets/message-square-dots-svgrepo-com.svg" alt="" />
-                                                    </button>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>

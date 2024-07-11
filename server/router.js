@@ -126,4 +126,30 @@ router.get('/house/:id', async (req, res) => {
     }
 })
 
+
+router.get('/set-favorite/:id', verifyToken, async (req, res) => {
+    const id = req.params.id
+ 
+    try{
+        if(id){
+            const house = await Houses.findOne({
+                _id: id
+            })
+            if(house){
+
+                await Houses.updateOne({_id: id}, {
+                    isFavorite: !house.isFavorite
+                })
+           
+                return res.status(201).json({ok: true})
+            }
+        }
+
+        return res.status(500).json({message: "Provide all necessary data", ok: false})
+    }catch(e){
+        return res.status(500).json({message: "ERROR", ok: false})
+    }
+})
+
+
 module.exports = router
