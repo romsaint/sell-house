@@ -1,0 +1,191 @@
+.main{
+    padding: 100px 230px 0 230px;
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 80px;
+}
+
+.card{
+    padding: 20px;
+    width: 55%;
+    column-gap: 10px;
+    transition: 0.2s ease;
+    border: 2px dashed gainsboro;
+    max-height: 550px;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover{
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.13);
+}
+
+.rightSection{
+    display: flex;
+    width: 100%;
+    align-items: start;
+    flex-direction: column;
+}
+.rightSection h1{
+    font-size: 22px;
+    color: rgb(59, 59, 59);
+    margin-bottom: 50px;
+}
+.placeMarker{
+    width: 27px;
+    height: 27px;
+}
+.addressContainer{
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    margin: 35px 0;
+    color: rgb(66, 66, 66);
+}
+.cityContainer{
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    margin: 35px 0;
+    color: rgb(66, 66, 66);
+}
+.cityContainer p{
+    text-transform: capitalize;
+}
+.citySvg{
+    width: 27px;
+    height: 27px;
+}
+.exactAddress{
+    display: flex;
+    justify-content: space-around;
+}
+
+.priceRightSection{
+    padding: 7px;
+    border-radius: 4px;
+    background-color: rgb(251, 226, 156);
+    font-size: 18px;
+}
+.roomsRightSection{
+    display: flex;
+    column-gap: 30px;
+}
+.roomsRightSection div:not(:last-child){
+    padding: 6px;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    column-gap: 20px;
+}
+.roomsRightSection div img{
+    width: 25px;
+    height: 25px;
+}
+
+.favoriteContainerRightSection{
+    margin-left: auto;
+    display: flex;
+    column-gap: 30px;
+}
+.favoriteContainerRightSection button{
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed gainsboro;
+}
+.favorite img, .message img{
+    width: 19px;
+    height: 19px;
+}
+
+
+
+.roomsRightSection div{
+    padding: 6px;
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    column-gap: 20px;
+}
+.rightSectionSceleton{
+    display: flex;
+    background-color: rgb(218, 218, 218);
+    width: 100%;
+    row-gap: 40px;
+    align-items: start;
+    margin-left: 10px;
+    flex-direction: column;
+}
+.bedroomRightSection, .bathroomRightSection{
+    color: rgb(48, 48, 48);
+}
+.favorite img{
+    filter: invert(1);
+}
+.cardImages{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "i1 i1" "i2 i3";
+    gap: 20px;
+}
+.cardImage1{
+    grid-area: i1;
+}
+.cardImage{
+    height: 15.625vw;
+    border: 3px groove gainsboro;
+    border-radius: 3px;
+    width: 100%;
+    object-fit: cover;
+}
+.sceletonImage{
+    height: 15.625vw;
+    border: 3px groove gainsboro;
+    background-color: rgb(167, 167, 167);
+    border-radius: 3px;
+    width: 100%;
+}
+
+.titleCard{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.descriptionCard{
+    line-height: 22px;
+    font-size: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid gainsboro;
+}
+
+
+.centerCard{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(239, 239, 239);
+    margin-bottom: 50px;
+}
+
+.policyContainer{
+    display: flex;
+    column-gap: 5px;
+}
+.policyContainer h2{
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+.priceActionCard{
+    display: flex;
+    margin-top: auto;
+}
+.priceContainer p{
+    padding: 7px;
+    border-radius: 4px;
+    background-color: rgb(251, 226, 156);
+    font-size: 18px;
+    width: fit-content;
+}

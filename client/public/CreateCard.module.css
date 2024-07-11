@@ -1,0 +1,135 @@
+.formGroup {
+    margin-bottom:20px;
+}
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+}
+.formGroup input, .formGroup textarea, .formGroup select {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--red-beige);
+    box-sizing: border-box;
+}
+
+.formGroupBtn button {
+    background-color: #cf643a;
+    color: #fff;
+    border: none;
+    padding: 20px;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.formGroupBtn button:hover {
+    background-color: #cf583a;
+}
+
+.createCardContainer{
+    padding: 50px 230px;
+}
+
+
+
+.policyForm{
+    width: 30%;
+}
+.policyLabel{
+    font-size: 20px;
+    margin-bottom: 10px;
+    
+}
+.policyInnerLabel{
+    margin-left: 50px;
+}
+.policyInputContainer input {
+    width: 70%;
+}
+.policyInputContainer{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+
+.imageUpload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin: 30px auto;
+}
+
+.imageUpload input[type="file"] {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #fff;
+}
+
+
+.imageUpload input[type="text"] {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.imageUpload input[type="file"]:hover,
+.imageUpload input[type="text"]:hover {
+    border-color: #999;
+}
+
+.imageUpload input[type="file"]:focus,
+.imageUpload input[type="text"]:focus {
+    border-color: #555;
+    outline: none;
+}
+
+
+.fileNameImage{
+    font-size: 13px;
+    color: #555;
+}
+.haveLink{
+    font-size: 19px;
+    color: black;
+}
+.chooseImageLabel{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.chooseImageLabel h1{
+    color: #992508;
+    font-size: 20px;
+}
+
+.successAlert{
+    padding: 25px;
+    background-color: #8dba60;
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+.successAlert::after{
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: 0;
+    height: 8px;
+    transition: 1s ease;
+    background-color: #538b1b;
+    width: 100%;
+}
+.textSuccessAlert{
+    font-size: 19px;
+}

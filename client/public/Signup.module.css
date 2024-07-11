@@ -1,0 +1,62 @@
+.signupContainer{
+    padding: 50px 230px;
+}
+
+.signupForm {
+    background-color: var(--red-beige);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.signupForm h2 {
+    margin-bottom: 20px;
+    color: var(--black-gray-color);
+}
+.signupForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--gray-color);
+    border-radius: 3px;
+}
+.btnSignup {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--orange-yellow-color);
+    border: none;
+    border-radius: 3px;
+    color: var(--black-gray-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnSignupDisabled{
+    width: 100%;
+    padding: 10px;
+    background-color: #f7c81f5a;
+    border: none;
+    border-radius: 3px;
+    color: var(--black-gray-color);
+    font-weight: bold;
+    cursor: default;
+}
+.alertText{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: rgb(233, 68, 68);
+}
+
+.alert{
+    width: 60%;
+    margin: 0 auto 30px auto;
+    padding: 25px;
+    background-color: rgb(213, 111, 111);
+    border-top: 4px solid rgb(143, 76, 76);
+}
+.alertMsg{
+    font-size: 21px;
+    color: black;
+    border-bottom: 1px solid transparent;
+}

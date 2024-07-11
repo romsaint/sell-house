@@ -1,0 +1,161 @@
+.offersContainer{
+    padding: 0 230px;
+}
+
+.searchFormText{
+    font-size: 25px;
+}
+.formSearch input{
+    padding: 12px;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+}
+
+.searchInputContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.flexSearchParams{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.minpriceContainer, .maxpriceContainer{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+}
+.policyLabel{
+    margin-bottom: 10px;
+}
+.petContainer{
+    row-gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+a{
+    display: contents;
+}
+
+.card{
+    padding: 20px;
+    margin-top: 100px;
+    margin-bottom: 70px;
+    width: 65%;
+    display: flex;
+    column-gap: 10px;
+    transition: 0.2s ease;
+    border: 2px dashed gainsboro;
+}
+.card:hover{
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.13);
+}
+
+.leftSection img{
+    width: 20.8vw;
+    height: 14vw;
+    object-fit: cover;
+    border-radius: 5px;    
+}
+
+.rightSection{
+    display: flex;
+    width: 100%;
+    align-items: start;
+    margin-left: 10px;
+    flex-direction: column;
+}
+.rightSection h1{
+    font-size: 22px;
+    color: rgb(59, 59, 59);
+    margin-bottom: 50px;
+}
+.placeMarker{
+    width: 27px;
+    height: 27px;
+}
+.addressContainerRightSection{
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    margin-bottom: 50px;
+    color: rgb(66, 66, 66);
+}
+
+.priceRightSection{
+    padding: 7px;
+    border-radius: 4px;
+    background-color: rgb(251, 226, 156);
+    font-size: 18px;
+}
+.roomsRightSection{
+    display: flex;
+    margin-top: auto;
+    width: 100%;
+    column-gap: 30px;
+}
+.roomsRightSection div:not(:last-child){
+    padding: 6px;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    column-gap: 20px;
+}
+.roomsRightSection div img{
+    width: 25px;
+    height: 25px;
+}
+
+.favoriteContainerRightSection{
+    margin-left: auto;
+    display: flex;
+    column-gap: 30px;
+}
+.favoriteContainerRightSection button{
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed gainsboro;
+}
+.favorite svg, .message svg{
+    width: 19px;
+    height: 19px;
+}
+
+
+
+.leftSectionSceleton{
+    width: 20.8vw;
+    height: 14vw;
+    background-color: rgb(218, 218, 218);
+    object-fit: cover;
+    border-radius: 5px;    
+}
+.roomsRightSection div:not(:last-child){
+    padding: 6px;
+    background-color: rgb(225, 225, 225);
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    column-gap: 20px;
+}
+.rightSectionSceleton{
+    display: flex;
+    background-color: rgb(218, 218, 218);
+    width: 100%;
+    row-gap: 40px;
+    align-items: start;
+    margin-left: 10px;
+    flex-direction: column;
+}
+.bedroomRightSection, .bathroomRightSection{
+    color: rgb(48, 48, 48);
+}
+.favorite img{
+    filter: invert(1);
+}

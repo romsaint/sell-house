@@ -1,0 +1,31 @@
+.loginContainer{
+    padding: 50px 230px;
+}
+
+.loginForm {
+    background-color: var(--red-beige);
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.loginForm h2 {
+    margin-bottom: 20px;
+    color: var(--black-gray-color);
+}
+.loginForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--gray-color);
+    border-radius: 3px;
+}
+.loginForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--orange-yellow-color);
+    border: none;
+    border-radius: 3px;
+    color: var(--black-gray-color);
+    font-weight: bold;
+    cursor: pointer;
+}
