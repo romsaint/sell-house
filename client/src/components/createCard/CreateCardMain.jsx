@@ -43,8 +43,7 @@ export function CreateCardMain(){
                     'Content-Type': 'multipart/form-data'
                 }
             });
-            console.log(localStorage)
-            console.log(user)
+
             if(res.data.ok){
                 setSuccessAlert(res.data.message)
             }

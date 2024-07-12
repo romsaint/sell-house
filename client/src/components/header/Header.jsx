@@ -7,11 +7,12 @@ export function Header(){
     const [isMobile, setIsMobile] = useState(false)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const {user, setUser} = useContext(AuthContext)
-
+    console.log(user)
   
     const reFmobileNavAuth = useRef()
 
     useEffect(() => {
+        console.log(user)
         if(window.innerWidth < 1050){
             setIsMobile(true)
             reFmobileNavAuth.current.style.display = 'flex'

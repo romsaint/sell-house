@@ -26,9 +26,8 @@ const schema = new mongoose.Schema({
         required: true
     },
     isFavorite: {
-        type: Boolean,
-        required: true,
-        default: false
+        type: [mongoose.Types.ObjectId],
+        required: false
     },
     propertyPolicy: {
         type: String,

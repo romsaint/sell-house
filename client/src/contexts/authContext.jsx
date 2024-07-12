@@ -15,7 +15,8 @@ export function AuthProvider({ children }) {
             setUser(JSON.parse(storedUser));
         }
     }, []);
-    console.log(user)
+
+
     useEffect(() => {
         if (user) {
             localStorage.setItem('user', JSON.stringify(user));

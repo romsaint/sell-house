@@ -1,8 +1,8 @@
 import {apiRequest} from '/src/utils/apiRequest'
 import styles from '/public/Offers.module.css'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useContext, useEffect, useMemo, useRef, useState } from 'react'
 import {useNavigate} from 'react-router-dom'
-
+import {AuthContext} from '/src/contexts/authContext'
 
 
 
@@ -10,6 +10,7 @@ export function MainOffers(){
     const [favorite, setFavorite] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
     const [minprice, setMinprice] = useState('Loading...')
+    const {user, setUser} = useContext(AuthContext)
     const [maxprice, setMaxprice] = useState('Loading...')
     const [city, setCity] = useState('Loading...')
     const [propertyPolicy, setPropertyPolicy] = useState('Loading...')
@@ -156,10 +157,13 @@ export function MainOffers(){
                                                 </div>
                                                 <div className={styles.favoriteContainerRightSection}>
                                                     <a href='/set-favorite' onClick={(e) => setFavoriteF(e, v._id)} className={`${styles.favorite} ${styles[`favorite${v._id}`]}`}>
-                                                        {v.isFavorite
-                                                            ?  <img src="/src/assets/favorite-svgrepo-com-yellow.svg" alt="" />
-                                                            :  <img src="/src/assets/favorite-svgrepo-com.svg" alt="" />
-                                                        }
+                                                        {/* {user.id}
+                                                        <br />
+                                                        {v.user_id}
+                                                        {user 
+                                                            ?  user.id === 
+                                                            : <img src="/src/assets/favorite-svgrepo-com.svg" alt="" />
+                                                        } */}
                                                     </a>
                                                     <a href='/message' className={styles.message}>
                                                         <img src="/src/assets/message-square-dots-svgrepo-com.svg" alt="" />

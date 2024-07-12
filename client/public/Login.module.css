@@ -29,3 +29,25 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+
+
+.githubLogin{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.githubLogin a{
+    display: contents;
+}
+.githubLogin button{
+    overflow: none;
+    padding: 16px 35px;
+    background-color: gainsboro;
+    border: 5px groove gainsboro;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.166);
+    transition: 0.2s ease;
+}
+.githubLogin button:hover{
+    background-color: rgb(145, 184, 219);
+}

@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import {apiRequest} from '/src/utils/apiRequest'
 import {useNavigate} from 'react-router-dom'
+import {AuthContext} from '/src/contexts/authContext'
 
 
 async function handleFormSubmit(e, navigate) {
@@ -17,8 +18,30 @@ async function handleFormSubmit(e, navigate) {
 
 
 export function HomeMain(){
+    const {user, setUser} = useContext(AuthContext)
     const navigate = useNavigate();
-    
+    const url = new URLSearchParams(location.search)
+
+    async function isUserExist(){
+        const res = await apiRequest.post('/is-user-exists', {
+            token: url.get('token'),
+            id:  url.get('id')
+        })
+
+        if(res.data.ok){
+            const dataSet = {id:  url.get('id'), username: url.get('username')}
+
+            localStorage.setItem('user', dataSet)
+            setUser(dataSet)
+        }
+    }
+
+    if(url.get('token') && url.get('id') && url.get('username')){
+        useEffect(() => {
+            isUserExist()
+            // window.location.href = 'http://localhost:5173'
+        }, [])
+    }
    
     return (
         <main className="main">
